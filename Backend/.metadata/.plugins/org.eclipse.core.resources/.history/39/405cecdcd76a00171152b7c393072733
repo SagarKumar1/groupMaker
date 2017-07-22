@@ -1,0 +1,21 @@
+package services;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+
+import pojo.test;
+
+import java.util.List;
+
+// No need implementation, just one interface, and you have CRUD, thanks Spring Data
+public interface testRepository extends MongoRepository<test, Long> {
+
+    test findFirstByDomain(String domain);
+
+    test findByDomainAndDisplayAds(String userId, String password);
+
+    //Supports native JSON query string
+    @Query("{userId:'tusanand'}")
+    test findCustomByDomain(String userId);
+
+}

@@ -1,0 +1,4 @@
+package Repository;
+
+public interface testRepository extends MongoRepository<Book, String>{
+}

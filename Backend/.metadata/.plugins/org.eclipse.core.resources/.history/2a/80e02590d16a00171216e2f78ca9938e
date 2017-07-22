@@ -1,0 +1,6 @@
+pojo\test.class
+com\example\gMake\BackendGMakeApplication.class
+dao\testDao.class
+services\testService.class
+controller\MainController.class
+daoImpl\testDaoImpl.class

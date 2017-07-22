@@ -1,0 +1,88 @@
+<div ng-controller="headerController as hCtrl">
+    <nav class="navbar navbar-default navbar-fixed-top gmakeheaderBg">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand gmakeLogo" ui-sref="home">gMake</a>
+                <button class="btn createGrp" ng-click="hCtrl.showModal()">Create</button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu-collapse">
+                <div class="dropdown pull-right logout-dropdown">
+                    <div id="username" class="pull-right username truncate">Welcome, Tushar</div>
+                    <button class="dropdown-toggle dropdown-button"
+                            id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <small><i class="glyphicon glyphicon-user userIcon"></i>
+                        </small>
+                    </button>
+                    <ul class="dropdown-menu dropdown-items" aria-labelledby="dropdownMenu1" >
+                        <li><a href="#">Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="modal fade in modalBackground" id="createGroup" tabindex="-1" role="dialog" aria-labelledby="cancelProcessModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modalBox">
+            <div class="modal-content modalRadius">
+                <div class="modal-header modalBorder modalTextPadding">
+                    <span class="modal-title modalCustomTitle" id="cancelProcessModalLabel">
+                        GROUP CREATION FORM
+                    </span>
+                </div>
+                <div class="modal-body modalBorder" style="padding-top: 25px;">
+                    <div class="container-fluid">
+                        <span class="col-md-6 col-sm-6 col-xs-6">
+                            <div>
+                                <input type="text" ng-bind="title" value="Event Title" style="border: none;border-bottom: dotted; color: #999A9D;"  onblur="if(this.value==''){ this.value='Event Title'; this.style.color='#999A9D';}" onfocus="if(this.value=='Event Title'){ this.value=''; this.style.color='#000000';}"></input>
+                            </div>
+                            <div style="padding-top: 25px;">
+                                <input type="text" ng-bind="orgName" value="Organizer Name" style="border: none;border-bottom: dotted; color: #999A9D;"  onblur="if(this.value==''){ this.value='Organizer Name'; this.style.color='#999A9D';}" onfocus="if(this.value=='Organizer Name'){ this.value=''; this.style.color='#000000';}"></input>
+                            </div>
+                        </span>
+                        <span class="col-md-6 col-sm-6 col-xs-6">
+                            <textarea style=" width: 294px; height: 75px;color: #999A9D;" onblur="if(this.value==''){ this.value='Add description of the Event'; this.style.color='#999A9D';}" onfocus="if(this.value=='Add description of the Event'){ this.value=''; this.style.color='#000000';}">Add description of the Event</textarea>
+                        </span>
+                    </div>
+                    <div class="container-fluid" style="padding-top: 25px;">
+                        <span class="col-md-6 col-sm-6 col-xs-6">Start Date <div style="padding-top: 6px;color: #999A9D;"><input type="datetime-local" name="startTime"></div></span>
+                        <span class="col-md-6 col-sm-6 col-xs-6">End Date <div style="padding-top: 6px;color: #999A9D;"><input type="datetime-local" name="endTime"></div></span>
+                    </div>
+                    <div class="container-fluid" style="padding-top: 25px;">
+                        <div style="padding-left: 15px; padding-bottom: 6px;">Select Image</div>
+
+                        <div class="dragDrop centered-text" ng-show="hCtrl.imageSelect" ngf-multiple="true" ngf-drop="hCtrl.showUploadModal($files)" ngf-select="hCtrl.showUploadModal($files)">
+                            <div style="position: relative;">
+                                <i class="glyphicon glyphicon-cloud-upload upIcon"></i>
+                                <span style="position: relative;bottom: 19px;left: 35px; top: 0px;">
+                                    <span class="dragDroptext">Drag &amp; Drop a file</span>
+                                    <span class="clickBrowseText">or Click to Browse</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="imagePosition" ng-hide="hCtrl.imageSelect">
+                            <span class="imageContainer" ng-repeat="image in hCtrl.ImageSrc" ng-click="hCtrl.removeImage($index)">
+                                <span class="glyphicon glyphicon-trash trashIcon"></span>
+                                <img class = "imageDisp" width= 70 height=70 ng-src="{{image}}"/>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer modalBorder" style="padding-top: 25px;padding-right: 18px;">
+                    <span class="modalCancelLink" ng-click="hCtrl.cancelProcess()">
+                        Don't Create
+                    </span>
+                    <button ng-click="" type="button" class="btn-primary-confirm">
+                        <span style="padding: 15px;">Create Group</span>
+                    </button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+</div>

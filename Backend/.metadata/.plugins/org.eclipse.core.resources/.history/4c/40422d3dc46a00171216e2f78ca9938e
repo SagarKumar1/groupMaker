@@ -1,0 +1,12 @@
+package dao;
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface testDao extends MongoRepository<Customer, String> {
+
+    public test findByFirstName(String firstName);
+    public List<Customer> findByLastName(String lastName);
+
+}

@@ -1,0 +1,9 @@
+package daoImplementation;
+
+import dao.testDao;
+
+@Repository("testDao")
+@Transactional
+public class testDaoImpl implements testDao{
+
+}

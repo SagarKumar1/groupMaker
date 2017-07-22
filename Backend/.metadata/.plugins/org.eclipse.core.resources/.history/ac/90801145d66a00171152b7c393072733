@@ -1,0 +1,13 @@
+package pojo;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "users")
+public class test {
+
+    private String userId;
+
+    private String password;
+
+    //getters and setters
+}

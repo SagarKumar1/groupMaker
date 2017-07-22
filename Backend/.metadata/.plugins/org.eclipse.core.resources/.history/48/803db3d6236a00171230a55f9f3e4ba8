@@ -1,0 +1,10 @@
+package daoImplementation;
+
+import org.springframework.stereotype.Repository;
+
+import dao.testDao;
+
+@Repository("testDao")
+public class testDaoImpl implements testDao{
+
+}

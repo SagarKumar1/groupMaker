@@ -1,0 +1,12 @@
+package daoImplementation;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import dao.testDao;
+
+@Repository("testDao")
+@Transactional
+public class testDaoImpl implements testDao{
+
+}

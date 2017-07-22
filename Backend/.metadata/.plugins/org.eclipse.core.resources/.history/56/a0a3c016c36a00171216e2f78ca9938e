@@ -1,0 +1,23 @@
+package pojo;
+
+import org.springframework.data.annotation.Id;
+
+public class test {
+
+    public String userId;
+    public String password;
+
+    public test() {}
+
+    public test(String userId, String password) {
+        this.userId = userId;
+        this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "test[userId='%s', password='%s']",
+                userId, password);
+    }
+}

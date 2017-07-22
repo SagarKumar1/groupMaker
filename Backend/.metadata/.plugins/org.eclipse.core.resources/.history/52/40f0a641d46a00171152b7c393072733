@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: Backend_gMake
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: tusanand
+Implementation-Vendor-Id: com.gMake
+Build-Jdk: 1.8.0_77
+Implementation-URL: http://projects.spring.io/spring-boot/Backend_gMak
+ e/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

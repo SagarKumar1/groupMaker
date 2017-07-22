@@ -1,0 +1,7 @@
+package daoImplementation;
+
+import dao.testDao;
+
+public class testDaoImpl implements testDao{
+
+}

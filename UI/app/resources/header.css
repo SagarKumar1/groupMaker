@@ -1,0 +1,68 @@
+html {
+    overflow-y: scroll;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.uiView{
+    margin-top: 50px;
+}
+.logout-dropdown {
+    display: flex;
+}
+.createGrp:hover{
+    background-color: #B50000;
+    color: #ffffff;
+}
+.createGrp{
+    background-color: #B55F55;
+    color: #ffffff;
+    margin-top: 8px;
+    margin-left: 40px;
+    border-radius: 2px;
+}
+.dropdown-button {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+}
+.gmakeLogo {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+.gmakeheaderBg {
+    background-color: #252932;
+}
+.userIcon{
+    color: #ffffff;
+    font-size: 18px;
+    padding-top: 14px;
+}
+#dropdownMenu1 {
+    width: 51px;
+    height: 37px;
+    padding-right: 0px;
+}
+.dropdown-menu{
+    left: 45% !important;
+    padding: 6px 0;
+    margin: 12px 0 0;
+    border-radius: 0px;
+    box-shadow: none;
+    min-width: 130px;
+}
+.username {
+    color: white;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 15px;
+    padding-top: 1.5px;
+}
+.truncate {
+    width: 120px;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,103 @@
+.modalBox{
+    margin-top: 80px;
+    border-radius: 2px;
+}
+.modalBackground{
+    height: 150%;
+}
+.modalBorder{
+    border: none;
+    padding: 0px;
+}
+.modalRadius{
+    border-radius: 2px;
+    padding:25px;
+    box-shadow: none;
+    height: 425px;
+    width: 710px;
+    right: 50px;
+}
+.btn-primary-confirm {
+    background-color: #B55F55;
+    color: #ffffff;
+    font-size: 13px;
+    border-radius: 3px;
+    height: 30px;
+    border: none;
+}
+.btn-primary-confirm:hover{
+    background-color: #B50000;
+}
+
+.upIcon {
+    color: #B55F55;
+    font-size: 40px;
+    position: relative;
+    left: 25px;
+    top: 10px;
+}
+.dragDroptext {
+    font-size: 18px;
+    font-family: "OpenSans";
+    color: #B55F55;
+    padding-left: 0;
+}
+.clickBrowseText {
+    font-size: 14px;
+    font-family: "OpenSans";
+    color: #B55F55;
+}
+.dragDrop:hover{
+    border: 1px dashed #B50000;
+    background: #CCCBCB;
+}
+.dragDrop:hover .upIcon,.dragDrop:hover .dragDroptext,.dragDrop:hover .clickBrowseText,.dragDrop:hover{
+    color: #B50000;
+}
+.imagePosition{
+    margin-left: 14px;
+    position: relative;
+}
+.dragDrop {
+    border: 1px dashed #B55F55;
+    background: #f2f2f2;
+    height: 70px;
+    padding-top: 0px;
+    cursor: pointer;
+    cursor: hand;
+    width: 97%;
+    margin-left: 14px;
+    position: relative;
+}
+.centered-text {
+    text-align: center;
+}
+.modalCancelLink:hover {
+    color: #B50000;
+}
+.modalCancelLink{
+    cursor: pointer;
+    cursor: hand;
+    font-size: 13px;
+    color: #B55F55;
+    padding-right: 16px;
+}
+.trashIcon {
+    position: absolute;
+    display: none;
+    left:25px;
+    top:25px;
+}
+.imageContainer{
+    position: relative;
+    float:left;
+}
+.imageDisp{
+    padding-right: 10px;
+}
+.imageContainer:hover .imageDisp {
+    opacity: 0.1;
+}
+.imageContainer:hover .trashIcon {
+    display: inline;
+}

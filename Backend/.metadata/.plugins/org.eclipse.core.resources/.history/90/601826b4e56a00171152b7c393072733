@@ -1,0 +1,23 @@
+package controller;
+
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import Repository.testRepository;
+
+@RestController
+@RequestMapping("/header")
+public class MainController {
+	
+	@Autowired
+	  private testRepository testrepository;
+
+	@ResponseBody
+	@RequestMapping(method = RequestMethod.GET, produces = {MediaType.TEXT_PLAIN_VALUE})
+	String entry(){
+		return "Hello World";
+	}
+}

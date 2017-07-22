@@ -1,0 +1,16 @@
+package pojo;
+
+
+@Document(collection = "domain")
+public class test {
+
+    @Id
+    private long id;
+
+    @Indexed(unique = true)
+    private String domain;
+
+    private boolean displayAds;
+
+    //getters and setters
+}
